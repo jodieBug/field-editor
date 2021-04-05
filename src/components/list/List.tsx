@@ -5,12 +5,16 @@ interface Props {
   id: string;
   title: string;
   listItems: string[];
+  active: string;
+  onClick: (field: string) => void;
 }
 
 export const List: React.FunctionComponent<Props> = ({
   id,
   title,
   listItems,
+  onClick,
+  active,
 }) => {
   return (
     <div id={id} className={styles.listContainer}>
