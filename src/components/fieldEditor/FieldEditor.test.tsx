@@ -17,5 +17,7 @@ describe("field editor", () => {
     expect(screen.getByText(/The Editor/i)).toBeInTheDocument();
     expect(document.querySelector("#list_definitions")).toBeInTheDocument();
     expect(document.querySelector("#list_selected_fields")).toBeInTheDocument();
+    expect(screen.getByText("> Use")).toBeInTheDocument();
+    expect(screen.getByText("< Remove")).toBeInTheDocument();
   });
 });
