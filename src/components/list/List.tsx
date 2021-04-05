@@ -1,13 +1,18 @@
 import React from "react";
 
 interface Props {
+  id: string;
   title: string;
   listItems: string[];
 }
 
-export const List: React.FunctionComponent<Props> = ({ title, listItems }) => {
+export const List: React.FunctionComponent<Props> = ({
+  id,
+  title,
+  listItems,
+}) => {
   return (
-    <div className="list">
+    <div id={id} className="list">
       <p className="listTitle">{title}</p>
       <ul>
         {listItems.map((item, index) => {
