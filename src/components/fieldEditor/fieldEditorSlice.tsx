@@ -14,7 +14,7 @@ const initialState: FieldEditorState = {
   selectedFields: [],
 };
 
-export const fieldsEditorSlice = createSlice({
+export const fieldEditorSlice = createSlice({
   name: "FieldEditor",
   initialState,
   reducers: {
