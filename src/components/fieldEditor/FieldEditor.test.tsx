@@ -40,4 +40,28 @@ describe("field editor", () => {
     expect(useButton).not.toBeDisabled();
     expect(removeButton).toBeDisabled();
   });
+
+  it("selected list should contain the selected definition after clicking use", () => {
+    const item = screen.getByText(/AlertType/i);
+    userEvent.click(item);
+    userEvent.click(useButton);
+
+    expect(
+      within(
+        document.querySelector("#list_selected_fields") as HTMLElement
+      ).getByText(/AlertType/i)
+    ).toBeInTheDocument();
+  });
+
+  it("definitions list should not contain the selected definition after clicking use", () => {
+    const item = screen.getByText(/AlertType/i);
+    userEvent.click(item);
+    userEvent.click(useButton);
+
+    expect(
+      within(
+        document.querySelector("#list_definitions") as HTMLElement
+      ).queryByText(/AlertType/i)
+    ).toBeNull();
+  });
 });
