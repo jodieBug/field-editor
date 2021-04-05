@@ -25,6 +25,8 @@ export const FieldEditor: React.FunctionComponent = () => {
   return (
     <div className={styles.fieldEditor}>
       <div className={styles.title}>{title}</div>
+      <div className={styles.listContainer}>
+      </div>
     </div>
   );
 };
