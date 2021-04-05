@@ -20,6 +20,16 @@ export const FieldEditor: React.FunctionComponent = () => {
     (definition) => !selectedFields.includes(definition)
   );
 
+  const selectFieldAndClear = () => {
+    dispatch(selectField(activeField));
+    setActiveField("");
+  };
+
+  const removeFieldAndClear = () => {
+    dispatch(removeField(activeField));
+    setActiveField("");
+  };
+
   const disableButton = (list: string[]) =>
     activeField === "" || !list.includes(activeField);
 
