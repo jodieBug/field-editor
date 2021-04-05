@@ -18,4 +18,12 @@ describe("list component", () => {
   it("renders a title", () => {
     expect(screen.getByText(/pokemon/i)).toBeInTheDocument();
   });
+
+  it("displays a list of items", () => {
+    expect(screen.getByText(/bulbasaur/i)).toBeInTheDocument();
+    expect(screen.getByText(/charmander/i)).toBeInTheDocument();
+    expect(screen.getByText(/squirtle/i)).toBeInTheDocument();
+    expect(screen.getByText(/pikachu/i)).toBeInTheDocument();
+    expect(screen.getByText(/jigglypuff/i)).toBeInTheDocument();
+  });
 });
