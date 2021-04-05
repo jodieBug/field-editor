@@ -15,5 +15,7 @@ describe("field editor", () => {
 
   it("renders with the correct components", () => {
     expect(screen.getByText(/The Editor/i)).toBeInTheDocument();
+    expect(document.querySelector("#list_definitions")).toBeInTheDocument();
+    expect(document.querySelector("#list_selected_fields")).toBeInTheDocument();
   });
 });
