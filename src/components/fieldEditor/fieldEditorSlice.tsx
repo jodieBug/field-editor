@@ -25,6 +25,12 @@ export const fieldsEditorSlice = createSlice({
     selectField: (state, action: PayloadAction<string>) => {
       state.selectedFields.push(action.payload);
     },
+    removeField: (state, action: PayloadAction<string>) => {
+      state.selectedFields.splice(
+        state.selectedFields.indexOf(action.payload),
+        1
+      );
+    },
   },
 });
 
