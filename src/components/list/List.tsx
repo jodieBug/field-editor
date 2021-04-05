@@ -21,8 +21,12 @@ export const List: React.FunctionComponent<Props> = ({
       <p className={styles.title}>{title}</p>
       <ul className={styles.list}>
         {listItems.map((item, index) => {
+          const className =
+            item === active
+              ? `${styles.active} ${styles.listItem}`
+              : styles.listItem;
           return (
-            <li className={styles.listItem} key={index}>
+            <li key={index} className={className} onClick={() => onClick(item)}>
               {item}
             </li>
           );
