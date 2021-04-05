@@ -36,11 +36,15 @@ export const FieldEditor: React.FunctionComponent = () => {
           id="list_definitions"
           title={"Definitions"}
           listItems={definitions}
+          onClick={setActiveField}
+          active={activeField}
         />
         <List
           id="list_selected_fields"
           title={"Selected Fields"}
           listItems={selectedFields}
+          onClick={setActiveField}
+          active={activeField}
         />
       </div>
     </div>
