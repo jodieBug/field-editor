@@ -1,0 +1,19 @@
+{
+  "fieldDefinitions": [
+    "Domain",
+    "Object",
+    "ObjectClass",
+    "FreeText",
+    "DateTime",
+    "Origin",
+    "OriginEvtClass",
+    "DomainClass",
+    "OriginSeverity",
+    "ObjectState",
+    "Name",
+    "AlertType",
+    "hasAccepted",
+    "hasAcknowledged"
+  ],
+  "title": "The Editor"
+}
