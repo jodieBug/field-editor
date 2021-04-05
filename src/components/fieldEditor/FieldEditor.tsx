@@ -53,8 +53,18 @@ export const FieldEditor: React.FunctionComponent = () => {
           active={activeField}
         />
         <div className={styles.buttonContainer}>
-          <button disabled={disableButton(definitions)}>{"> Use"}</button>
-          <button disabled={disableButton(selectedFields)}>{"< Remove"}</button>
+          <button
+            disabled={disableButton(definitions)}
+            onClick={selectFieldAndClear}
+          >
+            {"> Use"}
+          </button>
+          <button
+            disabled={disableButton(selectedFields)}
+            onClick={removeFieldAndClear}
+          >
+            {"< Remove"}
+          </button>
         </div>
         <List
           id="list_selected_fields"
