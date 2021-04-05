@@ -1,0 +1,23 @@
+.list {
+  padding: 12px;
+  min-width: 200px;
+}
+
+.listTitle {
+  margin-top: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+  padding: 10px;
+  margin: 0;
+  overflow: auto;
+  height: 300px;
+  background-color: #424242;
+}
+
+li {
+  cursor: pointer;
+  line-height: 24px;
+}
