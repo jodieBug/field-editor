@@ -15,7 +15,7 @@ const initialState: FieldEditorState = {
 };
 
 export const fieldEditorSlice = createSlice({
-  name: "FieldEditor",
+  name: "fieldEditor",
   initialState,
   reducers: {
     fetchData: (state) => {
