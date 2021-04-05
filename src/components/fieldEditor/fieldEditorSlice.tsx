@@ -5,7 +5,7 @@ import { createSlice } from "@reduxjs/toolkit";
 interface FieldEditorState {
   fieldDefinitions: string[];
   title: string;
-  selectedFields: [];
+  selectedFields: string[];
 }
 
 const initialState: FieldEditorState = {
