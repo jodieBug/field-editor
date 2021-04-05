@@ -63,4 +63,15 @@ describe("field editor", () => {
       ).queryByText(/AlertType/i)
     ).toBeNull();
   });
+
+  it("should enable the remove button when a list item is selected in the selected fields list", () => {
+    const item = screen.getByText(/AlertType/i);
+    userEvent.click(item);
+    userEvent.click(useButton);
+    const selectedItem = screen.getByText(/AlertType/i);
+    userEvent.click(selectedItem);
+
+    expect(removeButton).not.toBeDisabled();
+    expect(useButton).toBeDisabled();
+  });
 });
