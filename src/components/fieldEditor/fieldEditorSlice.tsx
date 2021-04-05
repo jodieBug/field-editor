@@ -17,6 +17,9 @@ export const fieldsEditorSlice = createSlice({
   name: "FieldEditor",
   initialState,
   reducers: {
-    
-  }
-})
+    fetchData: (state) => {
+      state.title = data.title;
+      state.fieldDefinitions = data.fieldDefinitions;
+    },
+  },
+});
