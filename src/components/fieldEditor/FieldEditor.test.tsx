@@ -1,0 +1,19 @@
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import { Provider } from "react-redux";
+import { store } from "../../app/store";
+import { FieldEditor } from "./FieldEditor";
+
+describe("field editor", () => {
+  beforeEach(() => {
+    render(
+      <Provider store={store}>
+        <FieldEditor />
+      </Provider>
+    );
+  });
+
+  it("renders with the correct components", () => {
+    expect(screen.getByText(/The Editor/i)).toBeInTheDocument();
+  });
+});
