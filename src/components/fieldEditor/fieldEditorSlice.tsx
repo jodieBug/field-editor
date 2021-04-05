@@ -26,3 +26,4 @@ export const fieldsEditorSlice = createSlice({
 });
 
 export const selectFieldEditor = (state: RootState) => state.FieldEditor;
+export const { fetchData } = fieldsEditorSlice.actions;
