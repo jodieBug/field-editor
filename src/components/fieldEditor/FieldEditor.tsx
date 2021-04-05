@@ -9,9 +9,18 @@ import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import styles from "./FieldEditor.module.css";
 
 export const FieldEditor: React.FunctionComponent = () => {
+  const dispatch = useAppDispatch();
   const { fieldDefinitions, selectedFields, title } = useAppSelector(
     selectFieldEditor
   );
+
+  const firstRender = useRef(true);
+  useEffect(() => {
+    if (firstRender.current) {
+      dispatch(fetchData());
+      firstRender.current = false;
+    }
+  }, []);
 
   return (
     <div className={styles.fieldEditor}>
