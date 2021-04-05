@@ -1,13 +1,13 @@
-.list {
+.listContainer {
   padding: 12px;
   min-width: 200px;
 }
 
-.listTitle {
+.title {
   margin-top: 0;
 }
 
-ul {
+.list {
   list-style-type: none;
   padding-inline-start: 0;
   padding: 10px;
@@ -17,7 +17,7 @@ ul {
   background-color: #424242;
 }
 
-li {
+.listItem {
   cursor: pointer;
   line-height: 24px;
 }
