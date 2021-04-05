@@ -5,6 +5,9 @@ import { Provider } from "react-redux";
 import { store } from "../../app/store";
 import { FieldEditor } from "./FieldEditor";
 
+let useButton: HTMLElement;
+let removeButton: HTMLElement;
+
 describe("field editor", () => {
   beforeEach(() => {
     render(
@@ -12,6 +15,9 @@ describe("field editor", () => {
         <FieldEditor />
       </Provider>
     );
+
+    useButton = screen.getByText("> Use");
+    removeButton = screen.getByText("< Remove");
   });
 
   it("renders with the correct components", () => {
