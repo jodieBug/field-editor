@@ -1,6 +1,6 @@
-import * as data from "../../response.json";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../../app/store";
-import { createSlice } from "@reduxjs/toolkit";
+import * as data from "../../response.json";
 
 interface FieldEditorState {
   fieldDefinitions: string[];
