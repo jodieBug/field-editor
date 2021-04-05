@@ -10,6 +10,8 @@ const pokemon = [
   "jigglypuff",
 ];
 
+const selectListItemMock = jest.fn();
+
 describe("list component", () => {
   beforeEach(() => {
     render(<List id="pokedex" title="Pokemon" listItems={pokemon} />);
