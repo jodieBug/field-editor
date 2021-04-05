@@ -20,4 +20,11 @@ describe("field editor", () => {
     expect(screen.getByText("> Use")).toBeInTheDocument();
     expect(screen.getByText("< Remove")).toBeInTheDocument();
   });
+
+  it("should have disabled buttons when no items are selected", () => {
+    const useButton = screen.getByText("> Use");
+    const removeButton = screen.getByText("< Remove");
+    expect(useButton).toBeDisabled();
+    expect(removeButton).toBeDisabled();
+  });
 });
