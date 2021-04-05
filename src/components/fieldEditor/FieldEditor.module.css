@@ -26,14 +26,17 @@
   padding: 12px;
 }
 
-.buttonContainer button {
+.fieldEditor button {
+  color: #fafafa;
   min-width: 80px;
   padding: 4px;
+  border-radius: 5px;
+}
+
+.buttonContainer button {
   margin: 4px;
   background-color: #00b0ff;
-  border-radius: 5px;
   border: none;
-  color: #fafafa;
 }
 
 .buttonContainer button:disabled {
