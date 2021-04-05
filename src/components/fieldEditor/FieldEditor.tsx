@@ -31,6 +31,16 @@ export const FieldEditor: React.FunctionComponent = () => {
     <div className={styles.fieldEditor}>
       <div className={styles.title}>{title}</div>
       <div className={styles.listContainer}>
+        <List
+          id="list_definitions"
+          title={"Definitions"}
+          listItems={definitions}
+        />
+        <List
+          id="list_selected_fields"
+          title={"Selected Fields"}
+          listItems={selectedFields}
+        />
       </div>
     </div>
   );
