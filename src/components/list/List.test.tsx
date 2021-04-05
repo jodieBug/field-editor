@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { List } from "./List";
 
 const pokemon = [
@@ -19,5 +19,9 @@ describe("list component", () => {
         listItems={pokemon}
       />
     );
+  });
+
+  it("renders a title", () => {
+    expect(screen.getByText(/pokemon/i)).toBeInTheDocument();
   });
 });
