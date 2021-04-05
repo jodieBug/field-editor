@@ -40,12 +40,8 @@ export const FieldEditor: React.FunctionComponent = () => {
           active={activeField}
         />
         <div className={styles.buttonContainer}>
-          <button>
-            {"> Use"}
-          </button>
-          <button>
-            {"< Remove"}
-          </button>
+          <button>{"> Use"}</button>
+          <button>{"< Remove"}</button>
         </div>
         <List
           id="list_selected_fields"
