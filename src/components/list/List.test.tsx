@@ -45,4 +45,12 @@ describe("list component", () => {
     expect(activeItem).toHaveClass("active");
     expect(inactiveItem).not.toHaveClass("active");
   });
+
+  it("calls the on click function with the correct arguement", () => {
+    const item = screen.getByText(/charmander/i);
+    userEvent.click(item);
+
+    expect(selectListItemMock).toHaveBeenCalledWith("charmander");
+    expect(selectListItemMock).toHaveBeenCalledTimes(1);
+  });
 });
