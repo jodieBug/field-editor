@@ -14,7 +14,15 @@ const selectListItemMock = jest.fn();
 
 describe("list component", () => {
   beforeEach(() => {
-    render(<List id="pokedex" title="Pokemon" listItems={pokemon} />);
+    render(
+      <List
+        id="pokedex"
+        title="Pokemon"
+        listItems={pokemon}
+        onClick={(field) => selectListItemMock(field)}
+        active="pikachu"
+      />
+    );
   });
 
   it("renders a title", () => {
