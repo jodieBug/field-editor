@@ -32,4 +32,12 @@ describe("field editor", () => {
     expect(useButton).toBeDisabled();
     expect(removeButton).toBeDisabled();
   });
+
+  it("should enable the use button when a list item is selected in the definitions list", () => {
+    const item = screen.getByText(/AlertType/i);
+    userEvent.click(item);
+
+    expect(useButton).not.toBeDisabled();
+    expect(removeButton).toBeDisabled();
+  });
 });
