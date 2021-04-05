@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { List } from "../list/List";
 import {
   fetchData,
@@ -14,6 +14,7 @@ export const FieldEditor: React.FunctionComponent = () => {
   const { fieldDefinitions, selectedFields, title } = useAppSelector(
     selectFieldEditor
   );
+  const [activeField, setActiveField] = useState("");
 
   const definitions = fieldDefinitions.filter(
     (definition) => !selectedFields.includes(definition)
