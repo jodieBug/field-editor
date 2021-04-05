@@ -12,13 +12,7 @@ const pokemon = [
 
 describe("list component", () => {
   beforeEach(() => {
-    render(
-      <List
-        id="pokedex"
-        title="Pokemon"
-        listItems={pokemon}
-      />
-    );
+    render(<List id="pokedex" title="Pokemon" listItems={pokemon} />);
   });
 
   it("renders a title", () => {
