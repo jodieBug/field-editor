@@ -36,4 +36,12 @@ describe("list component", () => {
     expect(screen.getByText(/pikachu/i)).toBeInTheDocument();
     expect(screen.getByText(/jigglypuff/i)).toBeInTheDocument();
   });
+
+  it("hilights the selected list item", () => {
+    const activeItem = screen.getByText(/pikachu/i);
+    const inactiveItem = screen.getByText(/squirtle/i);
+
+    expect(activeItem).toHaveClass("active");
+    expect(inactiveItem).not.toHaveClass("active");
+  });
 });
