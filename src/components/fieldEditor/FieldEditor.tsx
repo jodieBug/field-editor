@@ -15,6 +15,10 @@ export const FieldEditor: React.FunctionComponent = () => {
     selectFieldEditor
   );
 
+  const definitions = fieldDefinitions.filter(
+    (definition) => !selectedFields.includes(definition)
+  );
+
   const firstRender = useRef(true);
   useEffect(() => {
     if (firstRender.current) {
