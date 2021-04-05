@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./List.module.css";
 
 interface Props {
   id: string;
@@ -12,11 +13,15 @@ export const List: React.FunctionComponent<Props> = ({
   listItems,
 }) => {
   return (
-    <div id={id} className="list">
-      <p className="listTitle">{title}</p>
-      <ul>
+    <div id={id} className={styles.listContainer}>
+      <p className={styles.title}>{title}</p>
+      <ul className={styles.list}>
         {listItems.map((item, index) => {
-          return <li key={index}>{item}</li>;
+          return (
+            <li className={styles.listItem} key={index}>
+              {item}
+            </li>
+          );
         })}
       </ul>
     </div>
