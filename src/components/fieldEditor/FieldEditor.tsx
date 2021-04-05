@@ -39,6 +39,14 @@ export const FieldEditor: React.FunctionComponent = () => {
           onClick={setActiveField}
           active={activeField}
         />
+        <div className={styles.buttonContainer}>
+          <button>
+            {"> Use"}
+          </button>
+          <button>
+            {"< Remove"}
+          </button>
+        </div>
         <List
           id="list_selected_fields"
           title={"Selected Fields"}
