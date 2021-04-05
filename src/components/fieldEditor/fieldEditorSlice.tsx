@@ -5,3 +5,9 @@ interface FieldEditorState {
   title: string;
   selectedFields: [];
 }
+
+const initialState: FieldEditorState = {
+  fieldDefinitions: [],
+  title: "",
+  selectedFields: [],
+};
