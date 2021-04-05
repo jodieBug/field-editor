@@ -74,6 +74,9 @@ export const FieldEditor: React.FunctionComponent = () => {
           active={activeField}
         />
       </div>
+      <div className={styles.footer}>
+        <button>{"Apply"}</button>
+      </div>
     </div>
   );
 };
