@@ -22,6 +22,9 @@ export const fieldsEditorSlice = createSlice({
       state.title = data.title;
       state.fieldDefinitions = data.fieldDefinitions;
     },
+    selectField: (state, action: PayloadAction<string>) => {
+      state.selectedFields.push(action.payload);
+    },
   },
 });
 
