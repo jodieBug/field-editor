@@ -20,6 +20,9 @@ export const FieldEditor: React.FunctionComponent = () => {
     (definition) => !selectedFields.includes(definition)
   );
 
+  const disableButton = (list: string[]) =>
+    activeField === "" || !list.includes(activeField);
+
   const firstRender = useRef(true);
   useEffect(() => {
     if (firstRender.current) {
