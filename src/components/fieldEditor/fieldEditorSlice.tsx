@@ -34,7 +34,7 @@ export const fieldEditorSlice = createSlice({
   },
 });
 
-export const selectFieldEditor = (state: RootState) => state.FieldEditor;
-export const { fetchData } = fieldsEditorSlice.actions;
+export const selectFieldEditor = (state: RootState) => state.fieldEditor;
+export const { fetchData, selectField, removeField } = fieldEditorSlice.actions;
 
-export default fieldsEditorSlice.reducer;
+export default fieldEditorSlice.reducer;
