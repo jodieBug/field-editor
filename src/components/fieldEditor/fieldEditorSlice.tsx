@@ -1,4 +1,5 @@
 import * as data from "../../response.json";
+import { RootState } from "../../app/store";
 import { createSlice } from "@reduxjs/toolkit";
 
 interface FieldEditorState {
@@ -23,3 +24,5 @@ export const fieldsEditorSlice = createSlice({
     },
   },
 });
+
+export const selectFieldEditor = (state: RootState) => state.FieldEditor;
